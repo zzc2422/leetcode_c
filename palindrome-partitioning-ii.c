@@ -1,11 +1,19 @@
 #include "include_all.h"
 #include <stdio.h>
 
+static int get_length(const char str_a[]) {
+	const char *p;
+	for (p = str_a; *p != '\0'; p++)
+		;
+	return (int)(p - str_a);
+}
+
 // 注意：字符串不能为空串
-int _kmp_next(int next_a[], const char ch_a[], int length) {
+static int _kmp_next(int next_a[], const char ch_a[], int length) {
 	next_a[0] = -1;
-	int next = 0, next_i = 1, sub_i = 0;
-	while (next_i != length) {
+	int next = 0;
+	for (int next_i = 1, sub_i = 0; next_i != length;
+	     next_i++, sub_i++, next = sub_i) {
 		char ch = ch_a[next_i], sub = ch_a[sub_i];
 		if (ch == sub) {
 			next = next_a[next];
@@ -18,9 +26,6 @@ int _kmp_next(int next_a[], const char ch_a[], int length) {
 			sub = ch_a[sub_i];
 		}
 		next_a[next_i] = next;
-		sub_i++;
-		next = sub_i;
-		next_i++;
 	}
 	return next;
 }
