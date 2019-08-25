@@ -1,3 +1,5 @@
+// 未完成
+
 #include "include_all.h"
 #include <stdio.h>
 
@@ -33,7 +35,15 @@ static int _kmp_next(int next_a[], const char str_a[], int length) {
 // 注意：字符串长度至少为2
 static int _inverse_match(int match_a[], const char str_a[], const int next_a[],
 			  int length, int end_next) {
-	
+	int *sp = match_a;
+	while (1) {
+		int maxn_sub_i = (length >> 1), li = 0;
+		const char *rp = str_a + length;
+		while (1) {
+			rp--;
+			char r = *rp;
+		}
+	}
 }
 
 int minCut(const char str_a[]) {
