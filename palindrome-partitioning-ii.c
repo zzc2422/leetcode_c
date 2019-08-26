@@ -39,38 +39,54 @@ static void _kmp_next(int next_a[], int yes_next_a[], const char str_a[],
 }
 
 // palin_end_npa为可以使成为回文串的终点（不含）数组。注意：字符串长度至少为2。
-static const char **_inverse_match(const char *palin_end_npa[],
-				   const char *start_p, const char *end_np,
-				   const int next_a[], const int yes_next_a[]) {
-	const char **sp = palin_end_npa;
-	const char *palin_end_p = end_np - 1, *rp = palin_end_p;
+static const int *_inverse_match(int palin_len_a[], const char *start_p,
+				 const char *end_np, const int next_a[],
+				 const int yes_next_a[]) {
+	int *sp = palin_len_a;
+	const char *rp = end_np - 1;
+	int palin_len_m1 = rp - start_p, li = 0;
 	char r = *rp;
-	int li = 0;
 	while (1) {
 		while (r != start_p[li]) {
 			li = next_a[li];
-			palin_end_p = rp + li;
+			palin_len_m1 = rp + li - start_p;
 			if (li < 0) {
 				break;
 			}
 		}
-		if (start_p + ((li + 1) << 1) < palin_end_p) {
+		if (((li + 1) << 1) < palin_len_m1) {
 			li++;
 			rp--;
 			r = *rp;
 			continue;
 		}
-		*sp = palin_end_p + 1;
+		*sp = palin_len_m1 + 1;
 		sp++;
-		if (palin_end_p == start_p) {
+		if (palin_len_m1 == 0) {
 			return sp;
 		}
 		li = yes_next_a[li];
 	}
 }
 
-static int _seg_amount(int seg_amount_a[], const char str_a[], int length) {
-	
+// cut_times_a[i]表示从str_start_p[i + 1]开始之后的串分割次数
+static int _seg_amount(const char *str_start_p, const char *str_end_np,
+		       const int *pl_start_p, const int *pl_end_np,
+		       const int seg_amount_a[]) {
+	int length = str_end_np - str_start_p, seg_amount = length;
+	const int *p = pl_start_p;
+	do {
+		int palin_len = *p, after_len = length - palin_len;
+		if (after_len <= 1) {
+			return after_len + 1;
+		}
+		int sai = seg_amount_a[palin_len - 1] + 1;
+		if (sai < seg_amount) {
+			seg_amount = sai;
+		}
+		p++;
+	} while (p != pl_end_np);
+	return seg_amount;
 }
 
 int minCut(const char str_a[]) {
@@ -79,36 +95,18 @@ int minCut(const char str_a[]) {
 		return 1;
 	}
 	int length = end_np - str_a;
-	// cut_times_a[i]表示从str_a[i]开始之后的串分割次数
-	int seg_amount_a[length - 1];
+	// cut_times_a[i]表示从str_a[i + 1]开始之后的串分割次数
+	int seg_amount_a[length - 2], next_a[length], yes_next_a[length],
+		palin_len_a[length];
+	for (const char *start_p = end_np - 2;; start_p--) {
+		_kmp_next(next_a, yes_next_a, start_p, end_np - start_p);
+		const int *pl_end_np = _inverse_match(
+			palin_len_a, start_p, end_np, next_a, yes_next_a);
+		int seg_amount =
+			_seg_amount(start_p, end_np, palin_len_a, pl_end_np,
+				    seg_amount_a + (start_p - str_a));
+		if (start_p == str_a) {
+			return seg_amount;
+		}
+	}
 }
-
-/*
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/
