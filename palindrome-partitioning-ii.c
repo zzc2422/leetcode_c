@@ -38,11 +38,11 @@ static void _kmp_next(int next_a[], int yes_next_a[], const char str_a[],
 	}
 }
 
-// 注意：字符串长度至少为2
-static int _inverse_match(int match_ia[], const char *start_p,
-			  const char *end_np, const int next_a[],
-			  const int yes_next_a[]) {
-	int *sp = match_ia;
+// palin_end_npa为可以使成为回文串的终点（不含）数组。注意：字符串长度至少为2。
+static const char **_inverse_match(const char *palin_end_npa[],
+				   const char *start_p, const char *end_np,
+				   const int next_a[], const int yes_next_a[]) {
+	const char **sp = palin_end_npa;
 	const char *palin_end_p = end_np - 1, *rp = palin_end_p;
 	char r = *rp;
 	int li = 0;
@@ -60,14 +60,17 @@ static int _inverse_match(int match_ia[], const char *start_p,
 			r = *rp;
 			continue;
 		}
-		int palin_ni = (int)(palin_end_p - start_p + 1);
-		*sp = palin_ni;
+		*sp = palin_end_p + 1;
 		sp++;
 		if (palin_end_p == start_p) {
-			return (int)(sp - match_ia);
+			return sp;
 		}
-		li = next_a[li];
+		li = yes_next_a[li];
 	}
+}
+
+static int _seg_amount(int seg_amount_a[], const char str_a[], int length) {
+	
 }
 
 int minCut(const char str_a[]) {
@@ -76,9 +79,36 @@ int minCut(const char str_a[]) {
 		return 1;
 	}
 	int length = end_np - str_a;
-	int cut_times_a[length - 1];
-	cut_times_a[length - 2] = 1;
-	int next_a[length], yes_next_a[length], match_ia[length - 1];
-	_kmp_next(next_a, yes_next_a, str_a, length);
-	
+	// cut_times_a[i]表示从str_a[i]开始之后的串分割次数
+	int seg_amount_a[length - 1];
 }
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
