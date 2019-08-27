@@ -1,6 +1,4 @@
-﻿// 未完成
-
-#include "include_all.h"
+﻿#include "include_all.h"
 #include <stdio.h>
 
 static const char *_get_end_np(const char str_a[]) {
@@ -42,6 +40,7 @@ int minCut(const char str_a[]) {
 	// cut_times_a[i]表示从str_a[i + 1]开始之后的串分割次数
 	int cut_amount_a[length], palin_len_a[length];
 	cut_amount_a[length - 1] = -1;
+	cut_amount_a[length - 2] = 0;
 	palin_len_a[0] = 1;
 	const int *pl_end_np = palin_len_a + 1;
 	for (const char *start_p = end_np - 2;; start_p--) {
@@ -66,7 +65,7 @@ int minCut(const char str_a[]) {
 }
 
 int main() {
-	const char str_a[] = "abacabaabac";
+	const char str_a[] = "aab";
 	int min_seg_amount = minCut(str_a);
 	printf("%d\n", min_seg_amount);
 	return 0;
