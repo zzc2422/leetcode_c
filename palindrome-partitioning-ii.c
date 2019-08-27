@@ -63,10 +63,3 @@ int minCut(const char str_a[]) {
 		cut_amount_a[sa_offset] = min_cut_amount;
 	}
 }
-
-int main() {
-	const char str_a[] = "aab";
-	int min_seg_amount = minCut(str_a);
-	printf("%d\n", min_seg_amount);
-	return 0;
-}
