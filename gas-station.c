@@ -10,7 +10,6 @@ int canCompleteCircuit(const int gas_a[], int no_use, const int cost_a[],
 			min_rest = rest;
 			min_i = i;
 		}
-
 	} while (i != length);
 	return rest < 0 ? -1 : min_i;
 }
