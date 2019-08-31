@@ -16,15 +16,9 @@ int evalRPN(const char* const token_a[], int token_amount) {
 	int stack_a[token_amount], *sp = stack_a;
 	for (const char* const* pp = token_a; pp != token_a + token_amount;
 	     pp++) {
-		switch (**pp) {
-		case '+':
-			sp--;
-			*(sp - 1) += *sp;
-			break;
-		case '-':
-			sp--;
-			*(sp - 1) -= *sp;
-			break;
+		const char* str_a = *pp;
+		char first = *str_a;
+		switch (first) {
 		case '*':
 			sp--;
 			*(sp - 1) *= *sp;
@@ -33,8 +27,21 @@ int evalRPN(const char* const token_a[], int token_amount) {
 			sp--;
 			*(sp - 1) /= *sp;
 			break;
+		case '+':
+			sp--;
+			*(sp - 1) += *sp;
+			break;
+		case '-':
+			if (str_a[1] == '\0') {
+				sp--;
+				*(sp - 1) -= *sp;
+			} else {
+				*sp = -_str_to_int(str_a + 1);
+				sp++;
+			}
+			break;
 		default:
-			*sp = _str_to_int(*pp);
+			*sp = _str_to_int(str_a);
 			sp++;
 		}
 	}
