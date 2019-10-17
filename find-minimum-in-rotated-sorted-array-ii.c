@@ -1,6 +1,5 @@
 #include "include_all.h"
 
-#if 1
 int findMin(const int a[], int length) {
 	const int *left_p = a, *right_p = a + length - 1;
 	int left_value = *left_p, right_value = *right_p;
@@ -24,19 +23,3 @@ int findMin(const int a[], int length) {
 	}
 	return left_value;
 }
-#else
-int findMin(const int a[], int length) {
-	const int* end_np = a + length;
-	int min = *a;
-	while (1) {
-		a++;
-		if (a == end_np) {
-			return min;
-		}
-		int a_value = *a;
-		if (a_value < min) {
-			min = a_value;
-		}
-	}
-}
-#endif
