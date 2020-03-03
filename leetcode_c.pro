@@ -4,5 +4,5 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
+    largest-number.c \
     main.c \
-    two-sum-ii-input-array-is-sorted.c
