@@ -4,10 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    intersection-lcci.c \
-    main.c \
+	intersection-of-two-linked-lists.c \
+	main.c \
 
 HEADERS += \
-	include/list.h \
-	include/tree.h \
 	include_all.h \
