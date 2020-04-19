@@ -4,5 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    largest-number.c \
+    intersection-lcci.c \
     main.c \
+
+HEADERS += \
+	include/list.h \
+	include/tree.h \
+	include_all.h \
