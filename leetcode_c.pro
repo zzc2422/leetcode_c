@@ -4,8 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-	main.c \ \
-	maximum-product-subarray.c
+	find-peak-element.c \
+	main.c
 
 HEADERS += \
 	include_all.h \
