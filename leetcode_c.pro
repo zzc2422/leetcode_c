@@ -4,7 +4,7 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-	find-peak-element.c \
+	best-time-to-buy-and-sell-stock-iv.c \
 	main.c
 
 HEADERS += \
