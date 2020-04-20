@@ -4,8 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-	intersection-of-two-linked-lists.c \
-	main.c \
+	main.c \ \
+	maximum-product-subarray.c
 
 HEADERS += \
 	include_all.h \
