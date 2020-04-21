@@ -4,8 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
+	binary-tree-right-side-view.c \
 	main.c \
-	reverse-bits.c
 
 HEADERS += \
 	include_all.h \
