@@ -4,7 +4,7 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-	binary-tree-right-side-view.c \
+	excel-sheet-column-number.c \
 	main.c \
 
 HEADERS += \
