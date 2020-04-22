@@ -4,9 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-	count-number-of-nice-subarrays.c \
-	excel-sheet-column-number.c \
-	main.c \
+	main.c \ \
+	maximum-nesting-depth-of-two-valid-parentheses-strings.c
 
 HEADERS += \
 	include_all.h \
