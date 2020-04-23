@@ -4,8 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-	main.c \ \
-	maximum-nesting-depth-of-two-valid-parentheses-strings.c
+	coin-lcci.c \
+	main.c \
 
 HEADERS += \
 	include_all.h \
