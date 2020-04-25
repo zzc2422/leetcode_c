@@ -5,7 +5,7 @@ CONFIG -= qt
 
 SOURCES += \
 	main.c \ \
-	shu-zu-zhong-de-ni-xu-dui-lcof.c
+	permutations.c
 
 HEADERS += \
 	include_all.h \
