@@ -4,8 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-	main.c \
-	merge-k-sorted-lists.c
+	constrained-subset-sum.c \
+	main.c
 
 HEADERS += \
 	include_all.h \
