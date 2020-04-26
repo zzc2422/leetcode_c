@@ -6,8 +6,8 @@ typedef struct {
 } irpv_t;
 
 static irpv_t _get_max_start_endn(const int* start_p, const int* endn_p) {
-	const int* p = start_p;
-	int max = *p, *max_p = p;
+	const int *p = start_p, *max_p = p;
+	int max = *p;
 	while (1) {
 		p++;
 		if (p == endn_p) {
