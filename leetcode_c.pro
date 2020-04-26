@@ -5,7 +5,7 @@ CONFIG -= qt
 
 SOURCES += \
 	main.c \
-	sliding-window-maximum.c
+	merge-k-sorted-lists.c
 
 HEADERS += \
 	include_all.h \
