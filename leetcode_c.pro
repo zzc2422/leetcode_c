@@ -4,8 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-	constrained-subset-sum.c \
-	main.c
+	main.c \
+	search-in-rotated-sorted-array.c
 
 HEADERS += \
 	include_all.h \
