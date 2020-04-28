@@ -5,7 +5,7 @@ CONFIG -= qt
 
 SOURCES += \
 	main.c \
-	search-in-rotated-sorted-array.c
+	shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof.c
 
 HEADERS += \
 	include_all.h \
