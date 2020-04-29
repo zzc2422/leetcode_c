@@ -5,7 +5,7 @@ CONFIG -= qt
 
 SOURCES += \
 	main.c \
-	shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof.c
+	shan-mai-shu-zu-zhong-cha-zhao-mu-biao-zhi-by-leet.c
 
 HEADERS += \
 	include_all.h \
