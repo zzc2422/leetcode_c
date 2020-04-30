@@ -5,7 +5,7 @@ CONFIG -= qt
 
 SOURCES += \
 	main.c \
-	shan-mai-shu-zu-zhong-cha-zhao-mu-biao-zhi-by-leet.c
+	merge-two-sorted-lists.c
 
 HEADERS += \
 	include_all.h \
