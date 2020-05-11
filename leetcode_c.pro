@@ -5,7 +5,7 @@ CONFIG -= qt
 
 SOURCES += \
 	main.c \
-	sliding-window-maximum.c
+	powx-n.c
 
 HEADERS += \
 	include_all.h \
