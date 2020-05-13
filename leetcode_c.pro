@@ -4,8 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-	main.c \
-	powx-n.c
+	binary-tree-level-order-traversal.c \
+	main.c
 
 HEADERS += \
 	include_all.h \
