@@ -5,7 +5,7 @@ CONFIG -= qt
 
 SOURCES += \
 	main.c \
-	single-number.c
+	reverse-nodes-in-k-group.c
 
 HEADERS += \
 	include_all.h \
