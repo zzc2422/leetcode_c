@@ -4,8 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-	main.c \
-	reverse-nodes-in-k-group.c
+	find-the-longest-substring-containing-vowels-in-even-counts.c \
+	main.c
 
 HEADERS += \
 	include_all.h \
