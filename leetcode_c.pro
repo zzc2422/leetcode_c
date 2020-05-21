@@ -4,7 +4,7 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-	find-the-longest-substring-containing-vowels-in-even-counts.c \
+	construct-binary-tree-from-preorder-and-inorder-traversal.c \
 	main.c
 
 HEADERS += \
