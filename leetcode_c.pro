@@ -4,8 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-	construct-binary-tree-from-preorder-and-inorder-traversal.c \
-	main.c
+	main.c \
+	subarray-sums-divisible-by-k.c
 
 HEADERS += \
 	include_all.h \
