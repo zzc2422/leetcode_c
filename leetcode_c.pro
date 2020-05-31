@@ -5,7 +5,7 @@ CONFIG -= qt
 
 SOURCES += \
 	main.c \
-	subarray-sums-divisible-by-k.c
+	symmetric-tree.c
 
 HEADERS += \
 	include_all.h \
