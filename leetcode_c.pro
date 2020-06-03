@@ -5,7 +5,7 @@ CONFIG -= qt
 
 SOURCES += \
 	main.c \
-	symmetric-tree.c
+	new-21-game.c
 
 HEADERS += \
 	include_all.h \
