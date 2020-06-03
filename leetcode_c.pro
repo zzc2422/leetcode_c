@@ -4,8 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-	main.c \ \
-	two-sum.c
+	main.c \ \ \
+	remove-element.c
 
 HEADERS += \
 	include_all.h \
