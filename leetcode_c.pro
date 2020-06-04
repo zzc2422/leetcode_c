@@ -4,5 +4,5 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        main.c \
-        two-sum-ii-input-array-is-sorted.c
+        implement-strstr.c \
+        main.c
