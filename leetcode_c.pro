@@ -4,5 +4,5 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        implement-strstr.c \
-        main.c
+        main.c \
+        shun-shi-zhen-da-yin-ju-zhen-lcof.c
