@@ -4,5 +4,5 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        main.c \
-        remove-nth-node-from-end-of-list.c
+        first-missing-positive.c \
+        main.c
