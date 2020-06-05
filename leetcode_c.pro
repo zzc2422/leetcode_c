@@ -5,4 +5,4 @@ CONFIG -= qt
 
 SOURCES += \
         main.c \
-        shun-shi-zhen-da-yin-ju-zhen-lcof.c
+        remove-nth-node-from-end-of-list.c
