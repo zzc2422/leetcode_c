@@ -5,4 +5,4 @@ CONFIG -= qt
 
 SOURCES += \
         main.c \
-        trapping-rain-water.c
+        satisfiability-of-equality-equations.c
