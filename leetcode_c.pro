@@ -4,5 +4,5 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        main.c \
-        satisfiability-of-equality-equations.c
+        ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof.c \
+        main.c
