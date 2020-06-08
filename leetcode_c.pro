@@ -5,4 +5,4 @@ CONFIG -= qt
 
 SOURCES += \
         main.c \
-        same-tree.c
+        path-sum.c
