@@ -5,4 +5,4 @@ CONFIG -= qt
 
 SOURCES += \
         main.c \
-        palindrome-number.c
+        sort-list.c
