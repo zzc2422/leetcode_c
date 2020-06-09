@@ -5,4 +5,4 @@ CONFIG -= qt
 
 SOURCES += \
         main.c \
-        path-sum.c
+        palindrome-number.c
