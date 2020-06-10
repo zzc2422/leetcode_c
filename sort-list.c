@@ -1,6 +1,8 @@
 #include "include_all.h"
 
-// 假定链表长度不超过2^POWER
+#define POWER 32
+
+// 假定链表长度不超过2 ^ POWER
 struct ListNode* sortList(struct ListNode* head_p) {
 	
 }

@@ -4,5 +4,5 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        main.c \
-        sort-list.c
+        daily-temperatures.c \
+        main.c
